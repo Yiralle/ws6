@@ -1,0 +1,1000 @@
+   17  apt-get install gnuplot
+   18  sudo apt-get update
+   19  ls
+   20  rm downloaded_tweets_extend_nolf2.tsv 
+   21  rm downloaded_tweets_extend_original_nolf2.tsv 
+   22  ls
+   23  cp /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv /home/eric
+   24  ls
+   25  cp /home/test/A1/downloaded_tweets_extend_nolf2.tsv /home/eric
+   26  ls
+   27  head -10 downloaded_tweets_extend_nolf2.tsv 
+   28  cut $5 downloaded_tweets_extend_original_nolf2.tsv | head -10
+   29  awk $5 downloaded_tweets_extend_original_nolf2.tsv | head -10
+   30  cut -f8 downloaded_tweets_extend_original_nolf2.tsv | head -5
+   31  cut -f7 downloaded_tweets_extend_original_nolf2.tsv | head -5
+   32  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | head -5
+   33  cut -f3 downloaded_tweets_extend_original_nolf2.tsv | head -5
+   34  clear
+   35  ls
+   36  head -10 downloaded_tweets_extend_original_nolf2.tsv 
+   37  clear
+   38  head -2 downloaded_tweets_extend_original_nolf2.tsv 
+   39  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c| sort -rn| head -10
+   40  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | head -10
+   41  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | head -100
+   42  clear
+   43  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | cut -f6 | head -3
+   44  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | cut -f6 | head -5
+   45  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | cut -f6 | head -100
+   46  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | cut -f6 | head -10
+   47  clear
+   48  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | cut -f6 | head -10
+   49  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | cut -f6 | tr -d '\n' ',' | head -10
+   50  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | tr -d '\n' ',' | cut -f6| head -10
+   51  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | cut -f6| head -10
+   52  tr -d '\n' ',' downloaded_tweets_extend_original_nolf2.tsv | cut -f2 |cut -f6| head -10
+   53  tr -d '\n' downloaded_tweets_extend_original_nolf2.tsv | cut -f2 |cut -f6| head -10
+   54  tr '\n' downloaded_tweets_extend_original_nolf2.tsv | cut -f2 |cut -f6| head -10
+   55  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | cut -f6| head -10
+   56  sed 'N;s/\n/ /' downloaded_tweets_extend_original_nolf2.tsv | head -10
+   57  clear
+   58  ls
+   59  awk '{print $2 $6}' downloaded_tweets_extend_original_nolf2.tsv | head -10
+   60  awk '{print $2 "\t" $6}' downloaded_tweets_extend_original_nolf2.tsv | head -10
+   61  awk '{print $2 "\t" $5}' downloaded_tweets_extend_original_nolf2.tsv | head -10
+   62  awk '{print $2 "\t" $7}' downloaded_tweets_extend_original_nolf2.tsv | head -10
+   63  awk '{print $2 "\t" $6}' downloaded_tweets_extend_original_nolf2.tsv | head -10
+   64  awk '{print $2 "\t" $6}' downloaded_tweets_extend_original_nolf2.tsv | head -100
+   65  awk '{print $6}' downloaded_tweets_extend_original_nolf2.tsv | head -10
+   66  awk '{print $2}' downloaded_tweets_extend_original_nolf2.tsv | head -10
+   67  awk '{print $6}' downloaded_tweets_extend_original_nolf2.tsv | head -10
+   68  awk '{print $6}' downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2}' | head -2
+   69  awk '{print $6}' downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2}' | head -10
+   70  awk '{print $2}' downloaded_tweets_extend_original_nolf2.tsv | cut -f6 |  head -10
+   71  downloaded_tweets_extend_original_nolf2.tsv | head -3
+   72  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | head -10
+   73  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | head -100
+   74  grep 'referenced' downloaded_tweets_extend_original_nolf2.tsv | head -3
+   75  grep 'type=replied_to' downloaded_tweets_extend_original_nolf2.tsv | head -3
+   76  grep 'type=replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f6| head -3
+   77  grep 'type=replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f6| awk '{print $2 "\t" $6}| head -3
+   78  grep 'type=replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f6| awk '{print $2 "\t" $6}'| head -3
+   79  grep 'type=replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f6| awk '{print $2 "\t" $6}'| head -100
+   80  grep 'type=replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f6| awk '{print $6}'| head -10
+   81  grep 'type=replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f6| head -10
+   82  grep 'type=replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f2| head -10
+   83  awk '{print $2 $6}' downloaded_tweets_extend_original_nolf2.tsv | grep 'type=replied_to' | cut -f6| head -10
+   84  awk '{print $2 $6}' downloaded_tweets_extend_original_nolf2.tsv| cut -f6| head -10
+   85  awk '{print $2 "\t" $6}' downloaded_tweets_extend_original_nolf2.tsv| cut -f6| head -10
+   86  awk '{print $2 "/t" $6}' downloaded_tweets_extend_original_nolf2.tsv| cut -f6| head -10
+   87  awk '{print $2 "" $6}' downloaded_tweets_extend_original_nolf2.tsv| cut -f6| head -10
+   88  awk '{print $2"\t"$6}' downloaded_tweets_extend_original_nolf2.tsv| cut -f6| head -10
+   89  awk '{print $2"\t"$6}' downloaded_tweets_extend_original_nolf2.tsv| cut -f6| head -5
+   90  awk '{print $2}' downloaded_tweets_extend_original_nolf2.tsv| cut -f6| head -5
+   91  | cut -f6| cut "author"|  head -5
+   92  grep 'type=replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f6| awk '{print $2 "\t" $6
+   93  cut -f2 -f6 downloaded_tweets_extend_original_nolf2.tsv |head -5
+   94  cut -f6 downloaded_tweets_extend_original_nolf2.tsv |head -5
+   95  cut -f6 downloaded_tweets_extend_original_nolf2.tsv |head -100
+   96  awk 'print $6' downloaded_tweets_extend_original_nolf2.tsv |head -100
+   97  awk '{print $6}' downloaded_tweets_extend_original_nolf2.tsv |head -100
+   98  awk '{print $7}' downloaded_tweets_extend_original_nolf2.tsv |head -100
+   99  awk '{print $8}' downloaded_tweets_extend_original_nolf2.tsv |head -100
+  100  awk '{print $9}' downloaded_tweets_extend_original_nolf2.tsv |head -100
+  101  awk '{print $7}' downloaded_tweets_extend_original_nolf2.tsv |head -100
+  102  clear
+  103  awk '{print $7}' downloaded_tweets_extend_original_nolf2.tsv |head -10
+  104  awk '{print $6}' downloaded_tweets_extend_original_nolf2.tsv |head -10
+  105  awk '{print $6}' downloaded_tweets_extend_original_nolf2.tsv |head -20
+  106  awk '{print $7}' downloaded_tweets_extend_original_nolf2.tsv |head -20
+  107  grep '997519418492993537' downloaded_tweets_extend_original_nolf2.tsv | head -3
+  108  grep '997519418492993537' downloaded_tweets_extend_original_nolf2.tsv | head -10
+  109  awk '{print $5}' downloaded_tweets_extend_original_nolf2.tsv |head -20
+  110  awk '{print $5}' downloaded_tweets_extend_original_nolf2.tsv |head -10
+  111  clear
+  112  awk '{print $6}' downloaded_tweets_extend_original_nolf2.tsv |head -10
+  113  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | head -5
+  114  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | head -10
+  115  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | tail -10
+  116  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2"\t"$6}'| tail -10
+  117  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2"\t"$6}'| head -10
+  118  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | sort | head -10
+  119  awk '{print $6"\,
+  120  awk '{print $6","$2}' downloaded_tweets_extend_original_nolf2.tsv | head -10
+  121  awk '{print $6","$2}' downloaded_tweets_extend_original_nolf2.tsv | head -20
+  122  awk '{print $7","$2}' downloaded_tweets_extend_original_nolf2.tsv | head -20
+  123  awk '{print $6","$2}' downloaded_tweets_extend_original_nolf2.tsv | head -20
+  124  awk '{print $6","$2}' downloaded_tweets_extend_original_nolf2.tsv | sort | head -20
+  125  awk '{print $6","$2}' downloaded_tweets_extend_original_nolf2.tsv | sort -rn | head -20
+  126  awk '{print $6","$2}' downloaded_tweets_extend_original_nolf2.tsv | sort -rn | tail -20
+  127  awk '{print $6,$2}' downloaded_tweets_extend_original_nolf2.tsv | sort -rn | tail -20
+  128  awk '{print $6","$2}' downloaded_tweets_extend_original_nolf2.tsv | sort -rn | tail -20
+  129  awk '{print $6","$2}' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -rn| head -10
+  130  awk '{print $6"," $2}' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -rn| head -10
+  131  awk '{print $6"," $2}' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | head -10
+  132  awk '{print $6"," $2}' downloaded_tweets_extend_original_nolf2.tsv | sort | head -10
+  133  awk '{print $6"," $2}' downloaded_tweets_extend_original_nolf2.tsv | head -10
+  134  cd
+  135  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2,6 > Q1.csv
+  136  mv Q1.csv /home/eric/A3
+  137  cd A3
+  138  sort Q1.csv | uniq -c | sort -rn | awk '{if $1>=3) {print $2,$3}}' 
+  139  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1>=3) {print $2,$3}}' 
+  140  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1>=3) {print $1"\t"$2,$3}}' 
+  141  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==3) {print $1"\t"$2,$3}}' | wc -l 
+  142  cd
+  143  cp Q1.csv /home/eric
+  144  cd A3
+  145  cp Q1.csv /home/eric
+  146  cd
+  147  diff downloaded_tweets_extend_original_nolf2.tsv Q1.csv | cut -f4 | sort | uniq -c | sort -rn | head -30
+  148  ls
+  149  head -3 downloaded_tweets_extend_original_nolf2.tsv 
+  150  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | head -10
+  151  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | head -100
+  152  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | tail -100
+  153  clear
+  154  cut -f2, -f6 downloaded_tweets_extend_original_nolf2.tsv | tail -100
+  155  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | tail -100
+  156  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | head -10
+  157  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | head -50
+  158  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | tail 10
+  159  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | tail -10
+  160  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | sort | tail -10
+  161  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | sort | head -10
+  162  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c|  head -10
+  163  awk '{print $6 $2}' downloaded_tweets_extend_original_nolf2.tsv | head -5
+  164  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | sort | head -100
+  165  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | sort | tail -100
+  166  cut -f 2,6 downloaded_tweets_extend_original_nolf2.tsv | tail -100
+  167  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | head -10
+  168  clear
+  169  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2,6|  head -10
+  170  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2,6|  head -100
+  171  clear
+  172  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2,6 | sort | uniq -c| sort -rn|  head -10
+  173  ls
+  174  cd A3
+  175  ls
+  176  cd
+  177  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2,6 | sort | uniq -c > Q1.csv
+  178  ls
+  179  cat Q1.csv | head -10
+  180  rm Q1.csv
+  181  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2,6 > Q1.csv
+  182  cat Q1.csv | head -10
+  183  cd A3
+  184  ls
+  185  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2, | sort | uniq -c| sort -rn | head -10
+  186  awk '{print $1} Q1.csv | head -2
+  187  awk '{print $1}' Q1.csv | head -2
+  188  ls
+  189  rm Q1.csv
+  190  cd
+  191  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 6,2 > Q1.csv
+  192  mv Q1.csv /home/eric/A3
+  193  cd A3
+  194  cat Q1.csv | head -5
+  195  cat Q1.csv | tail -5
+  196  awk '{print $2 $6P}' Q1.csv | head -5
+  197  awk '{print $2 $6}' Q1.csv | head -5
+  198  awk '{print $1 $2}' Q1.csv | head -5
+  199  awk '{print $1"\t"$2}' Q1.csv | head -5
+  200  awk '{print $1"\t"$2}' Q1.csv | sort | uniq -c | sort -rn | head -5
+  201  awk '{print $1}' Q1.csv | sort | uniq -c | sort -rn | head -5
+  202  awk '{print $1"\t"$2}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  203  awk '{if ($1>=3) print $2"\t"$3}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  204  awk '{if ($1>=3) print $1"\t"$2}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  205  awk '{if (sort>=3) print $1"\t"$2}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  206  awk '{if (uniq>=3) print $1"\t"$2}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  207  awk '{if (print $1"\t"$2}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  208  awk '{if $0 >= 3(print $1"\t"$2)}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  209  awk '{if($0 >= 3) {print $1"\t"$2)}}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  210  awk '{if($0 >= 3) {print $1"\t"$2}}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  211  awk '{if($0 <= 3) {print $1"\t"$2}}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  212  awk '{if($0 >= 3) {print $1"\t"$2}}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  213  sort Q1.csv | uniq -c | sort -rn | awk '{if ($0>=3) {print $1, $2}}' | tail -5
+  214  sort Q1.csv | uniq -c | sort -rn | awk '{if ($0<=3) {print $1, $2}}' | tail -5
+  215  sort Q1.csv | uniq -c | sort -rn | awk '{{print $1, $2}}' | tail -5
+  216  sort Q1.csv | uniq -c | sort -rn | awk '{print $1 $2}' | tail -5
+  217  sort Q1.csv | uniq -c | sort -rn | awk '{print $1 $2}' | tail -10
+  218  sort Q1.csv | uniq -c | sort -rn | awk '{print $1 $2}' | head -10
+  219  awk '{if($0 >= 3) {print $1"\t"$2}}' Q1.csv | sort | uniq -c | sort -rn
+  220  awk '{print $0}' | head -10
+  221  awk '{print $0}' Q1.csv| head -10
+  222  awk '{{print $1"\t"$2}}' Q1.csv | sort | uniq -c | sort -rn | tail -5
+  223  awk '{{print $1"\t"$2}}' Q1.csv | sort | uniq -c | sort -rn | head -5
+  224  awk '{{print $1","$2}}' Q1.csv | sort | uniq -c | sort -rn | head -5
+  225  awk '{{print $1","$2, $0}}' Q1.csv | sort | uniq -c | sort -rn | head -5
+  226  awk '{{print $1","$2, $-1}}' Q1.csv | sort | uniq -c | sort -rn | head -5
+  227  awk '{{print $1","$2, $sort}}' Q1.csv | sort | uniq -c | sort -rn | head -5
+  228  awk '{{print $1","$2, $uniq}}' Q1.csv | sort | uniq -c | sort -rn | head -5
+  229  awk '{{print $1","$2}}' Q1.csv | sort | uniq -c | sort -rn | head -5
+  230  grep "106" Q1.csv | head -10
+  231  grep " 106 " Q1.csv | head -10
+  232  grep "106 " Q1.csv | head -10
+  233  grep "106 " Q1.csv
+  234  awk '{{print $1","$2}}' Q1.csv | sort | uniq -3c | sort -rn | head -5
+  235  awk '{{print $1","$2}}' Q1.csv | sort | uniq -c | sort -rn | head -5
+  236  cut -f 1,2 Q1.csv | sort | uniq -c | sort -rn | head -3
+  237  sort Q1.csv | uniq -c | sort | -rn | head -3
+  238  sort Q1.csv | uniq -c | sort -rn | head -3
+  239  sort Q1.csv | uniq -c | sort -rn | awk '{print $1}' | head -3
+  240  sort Q1.csv | uniq -c | sort -rn | awk '{print $0}' | head -3
+  241  sort Q1.csv | uniq -c | sort -rn | awk 'if ($1>=3) {print $2,$3}' | head -3
+  242  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1>=3) {print $2,$3}}' | head -3
+  243  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1>=3) {print $2,$3}}' | tail -3
+  244  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1>=3) {print $1,$2,$3}}' | tail -3
+  245  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1>=3) {print $2,$3}}' 
+  246  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1>=3) {print $1"\t"$2,$3}}' 
+  247  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==9) {print $1"\t"$2,$3}}' 
+  248  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==9) {print $1"\t"$2,$3}}' | wc -l
+  249  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==9) {print $3"\t"$2,$3}}' | wc -l
+  250  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==3) {print $1"\t"$2,$3}}' | wc -l
+  251  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==4) {print $3"\t"$2,$3}}' | wc -l
+  252  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==5) {print $3"\t"$2,$3}}' | wc -l
+  253  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==6) {print $3"\t"$2,$3}}' | wc -l
+  254  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==7) {print $3"\t"$2,$3}}' | wc -l
+  255  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==8) {print $3"\t"$2,$3}}' | wc -l
+  256  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==9) {print $3"\t"$2,$3}}' | wc -l
+  257  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==10) {print $3"\t"$2,$3}}' | wc -l
+  258  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==11) {print $3"\t"$2,$3}}' | wc -l
+  259  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==12) {print $3"\t"$2,$3}}' | wc -l
+  260  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==13) {print $3"\t"$2,$3}}' | wc -l
+  261  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==14) {print $3"\t"$2,$3}}' | wc -l
+  262  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==15) {print $3"\t"$2,$3}}' | wc -l
+  263  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==19) {print $3"\t"$2,$3}}' | wc -l
+  264  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==27) {print $3"\t"$2,$3}}' | wc -l
+  265  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==29) {print $3"\t"$2,$3}}' | wc -l
+  266  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==32) {print $3"\t"$2,$3}}' | wc -l
+  267  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==34) {print $3"\t"$2,$3}}' | wc -l
+  268  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==83) {print $3"\t"$2,$3}}' | wc -l
+  269  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==103) {print $3"\t"$2,$3}}' | wc -l
+  270  sort Q1.csv | uniq -c | sort -rn | awk '{if ($1==106) {print $3"\t"$2,$3}}' | wc -l
+  271  clear
+  272  cd
+  273  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2,6, 4 | head -10
+  274  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2,6,4 | head -10
+  275  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f 6,2,4 | head -10
+  276  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | cut -f4 | head -10
+  277  cp downloaded_tweets_extend_original_nolf2.tsv /home/eric/A3
+  278  cd A3
+  279  ls
+  280  rm downloaded_tweets_extend_original_nolf2.tsv 
+  281  cp Q1.csv /home/eric
+  282  cd
+  283  l;s
+  284  ls
+  285  clear
+  286  ls
+  287  diff downloaded_tweets_extend_original_nolf2.tsv Q1.csv | cut -f4 | head -10
+  288  diff downloaded_tweets_extend_original_nolf2.tsv Q1.csv | awk '{print $4}' | head -10
+  289  diff downloaded_tweets_extend_original_nolf2.tsv Q1.csv | cut -f4 | sort | uniq -c | sort -rn| head -10
+  290  diff downloaded_tweets_extend_original_nolf2.tsv Q1.csv | cut -f4 | sort | uniq -c | sort -rn| head -30
+  291  clear
+  292  cd A3
+  293  ls
+  294  rm Q1.csv
+  295  script a3.txt
+  296  ls
+  297  cat Q1.csv | head -10
+  298  vi a3.txt
+  299  ls
+  300  git init
+  301  git add .
+  302  git commit -m "first commit"
+  303  git branch -M main
+  304  git remote add origin https://github.com/Yiralle.A3.git
+  305  git push -u origin main
+  306  git remote add origin https://github.com/Yiralle/A3.git
+  307  git remote rm origin
+  308  git remote add origin https://github.com/Yiralle/A3.git
+  309  git push -u origin main
+  310  ls
+  311  cd CS131
+  312  ls
+  313  cd
+  314  rmdir -rf CS131
+  315  rm -rf CS131
+  316  ls
+  317   rm Q1.csv
+  318  mkdir ws5
+  319  head -10 amazon_reviews_us_Books_v1_02.tsv 
+  320  clear
+  321  head -3 amazon_reviews_us_Books_v1_02.tsv 
+  322  for i in 1 2 3 4 5; do echo $i; done
+  323  cut -f3 amazon_reviews_us_Books_v1_02.tsv | head -3
+  324  cut -f2 amazon_reviews_us_Books_v1_02.tsv | head -3
+  325  ls
+  326  clear
+  327  sort amazon_reviews_us_Books_v1_02.tsv | uniq -c | sort -rn | head -3
+  328  clear
+  329  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | head -3
+  330  for i in {0...3}; do cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn > cust[$i].txt; done
+  331  for i in {0...3}; do cut -f2 amazon_reviews_us_Books_v1_02.tsv 
+  332  for i in {0...3}; do cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn > $1.txt
+  333  for i in {0...3}; do cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn > $1.txt; done
+  334  ls
+  335  rmdir 'cust[{0...3}].txt'
+  336  rm 'cust[{0...3}].txt'
+  337  ls
+  338  cd c
+  339  clear
+  340  for i in {0..3}; do echo cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn > $i.txt; done
+  341  ls
+  342  rm 0.txt
+  343  rm 1.txt
+  344  rm 2.txt
+  345  rm 3.txt
+  346  head -3 amazon_reviews_us_Books_v1_02.tsv 
+  347  clear
+  348  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | head 
+  349  ls
+  350  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | awk '{print $2}' | head -3 > test5.txt
+  351  ls
+  352  cat test5.txt
+  353  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | awk '{print $2}' | head -1000 > test5.txt
+  354  cat test5.txt | head -10
+  355  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | awk '{print $2}' | head -5 > test5.txt
+  356  cat test5.txt | head -5
+  357  cat test5.txt | head -10
+  358  for i in test5.txt; do sed -n '{$i}p > $i.txt; done
+  359  for i in test5.txt; do echo sed -n '{$i}p > $i.txt; done
+  360  for i in test5.txt; do sed -n '{$i}p > $i.txt; done
+  361  ls
+  362  for i in test5.txt; do sed -n '{$i}p > $1.txt
+  363  done
+  364  clear
+  365  ls
+  366  cat test5.txt
+  367  for item in test5.txt; do sed -n '{$i}p' > $i.txt; done
+  368  for i in {0...5}; do cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | head -3; done
+  369  for i in {0...5}; sed -n '{$i}p' > $i.txt
+  370  for i in {0...5}; do sed -n '{$i}p' > $i.txt; done
+  371  for i in {0...5}; do sed -n '{$ip}' > $i.txt; done
+  372  for i in {0...5}; do echo sed -n '{$i}p' > $i.txt; done
+  373  ls
+  374  cat \{0...5\}.txt 
+  375  rm \{0...5\}.txt 
+  376  for i in {0..5}; do echo sed -n '{$i}p' > $i.txt; done
+  377  ls
+  378  rm 0.txt 
+  379  rm 1.txt 
+  380  rm 2.txt 
+  381  rm 3.txt 
+  382  rm 4.txt 
+  383  rm 5.txt 
+  384  for i in {0..5}; do echo sed -n '{$i}p' test5.txt > $i.txt; done
+  385  ls
+  386  rm 0.txt
+  387  rm 1.txt
+  388  rm 2.txt
+  389  rm 3.txt
+  390  rm 4.txt
+  391  rm 5.txt
+  392  tmux attach -t homework
+  393  ls
+  394  cat amazon_reviews_us_Books_v1_02.tsv | head -2
+  395  clear
+  396  ls
+  397  cat test5.txt
+  398  for i in {0..2}; do echo sed -n '{$i}p'; done
+  399  for i in {0..2}; do sed -n '{$i}p'; done
+  400  clear
+  401  for i in {0..2}; do echo sed -n '{$i}p'; done
+  402  for i in {1..5}; do echo sed -n '{$i}p' test5.txt; done
+  403  for i in {1..5}; do echo sed -n '{$ip}' test5.txt; done
+  404  for i in {1..5}; do echo sed -n {$i}p test5.txt; done
+  405  for i in {1..5}; do echo sed '{$i}'p test5.txt; done
+  406  for i in {1..5}; do echo sed -n '{$i}'p test5.txt; done
+  407  for i in {1..5}; do echo sed -n '{$1}'p test5.txt; done
+  408  for i in {1..5}; do echo sed -n '{$2}'p test5.txt; done
+  409  clear
+  410  for i in {1..5}; do touch "${FILE} test"; done
+  411  ls
+  412  for i in {1..5}; do touch "${FILE} test"; done < test5.txt
+  413  ls
+  414  rm ' test'
+  415  clear
+  416  ls
+  417  cat test5.txt
+  418  touch $(cat test5.txt)
+  419  ls
+  420  rm 45041039 
+  421  rm 50122160 
+  422  rm 507
+  423  rm 50732546 
+  424  rm 50776149 
+  425  rm 52615377 
+  426  ls
+  427  clear
+  428  vi test5.txt
+  429  cat test5.txt
+  430  touch $(cat test5.txt).txt
+  431  ls
+  432  rm 50122160 
+  433  rm 50732546.txt 
+  434  vi test5.txt
+  435  touch $(cat test5.txt).txt
+  436  ls
+  437  rm 435342534 
+  438  rm 50122160 
+  439  RM 50732546 
+  440  rm 50732546 
+  441  rm 5423543.txt 
+  442  clear
+  443  for i in {0..4}; do echo sed -; for i in {0..4}; do echo sed -d; done; 
+  444  clear
+  445  for i in {0..3}; do echo sed -n '{$i}p' test5.txt; done
+  446  for i in test5.txt; do echo sed -n '{$i}p' test5.txt; done
+  447  for i in test5.txt; do echo sed -n '{$1}p' test5.txt; done
+  448  for item in test5.txt; do echo sed -n '{$1}p' test5.txt; done
+  449  for item in test5.txt; do echo sed -n '{$i}p' test5.txt; done
+  450  clear
+  451  sed -n '{$i}p' test5.txt 
+  452  sed -n '{$1}p' test5.txt 
+  453  sed -n '{$2}p' test5.txt 
+  454  sed  '{$2}p' test5.txt 
+  455  sed -n '{$2p}' test5.txt 
+  456  sed -n '{$1p}' test5.txt 
+  457  clear
+  458  sed -n '{1p}' test5.txt 
+  459  sed -n '{2p}' test5.txt 
+  460  cat test5.txt
+  461  for item in test5.txt; do echo sed -n '{i}p' test5.txt; done
+  462  for i in {0..3}; do echo sed -n '{i}p' test5.txt; done
+  463  for i in {0..3}; do echo sed -n '{$i}p' test5.txt; done
+  464  for i in {1..3}; do echo sed -n '{i}p' test5.txt; done
+  465  for i in {1..3}; do echo "sed -n '{i}p'" test5.txt; done
+  466  for i in {1..3}; do echo sed -n "'{$i}p'" test5.txt; done
+  467  for i in {1..3}; do echo sed -n '{$"i"}p' test5.txt; done
+  468  for i in {1..3}; do echo sed -n '{"$i"}p' test5.txt; done
+  469  for i in {1..3}; do echo "sed -n '{$i}p'" test5.txt; done
+  470  for i in {1..3}; do echo "sed -n '{$i}p'" test5.txt | cat test5.txt; done
+  471  for i in {1..3}; do echo "sed -n '{$i}p'" test5.txt > "$i.txt"; done
+  472  ls
+  473  for i in {1..3}; do echo "sed -n '{$i}p'" test5.txt > $i.txt; done
+  474  ls
+  475  rm 1.txt
+  476  rm 2.txt
+  477  rm 3.txt
+  478  clear
+  479  ls
+  480  cat amazon_reviews_us_Books_v1_02.tsv | head -2
+  481  sort amazon_reviews_us_Books_v1_02.tsv | uniq -c | sort -rn | cut -f2 | head -3
+  482  clear
+  483  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | head -3
+  484  ls
+  485  for i in {0..3}; do 
+  486  clear
+  487  for item in test5.txt; do for i in {0..3}; echo "sed -n '{$i}p'"
+  488  for item in test5.txt; do for i in {0..3}; "sed -n '{$i}p'"
+  489  for item in test5.txt; do for i in {0..3}; sed -n '{$i}p'; done
+  490  for item in test5.txt; do for i in {0..3} sed -n '{$i}p'; done
+  491  clear
+  492  sed -n '{$1}p' test5.txt
+  493  sed -n '{1}p' test5.txt
+  494  sed -n '{1p}' test5.txt
+  495  sed -n '{2p}' test5.txt
+  496  for i in {0..3}; do echo sed -n '{$ip}' test5.txt; done
+  497  for i in {0..3}; do echo sed -n "'{$ip}'" test5.txt; done
+  498  for i in {0..3}; do echo "sed -n '{$ip}'" test5.txt; done
+  499  for i in {0..3}; do echo sed -n '{"$i"p}' test5.txt; done
+  500  for i in {1..3}; do echo sed -n '{$ip}' test5.txt; done
+  501  for i in {1..3}; do echo sed -n "'{$ip}'" test5.txt; done
+  502  for i in {1..3}; do echo sed -n '{$i}p' test5.txt; done
+  503  for i in {1..3}; do echo sed -n '{"$i",p}' test5.txt; done
+  504  for i in {1..3}; do echo sed -n "'{$i,p}'" test5.txt; done
+  505  for i in {1..3}; do echo sed -n "'{$ip}'" test5.txt; done
+  506  for i in {1..3}; do echo sed -n '{"\$i/"p}' test5.txt; done
+  507  for i in {1..3}; do echo sed -n '{\$i/p}' test5.txt; done
+  508  for i in {1..3}; do echo sed -n "'{\$i/p}'" test5.txt; done
+  509  for i in {1..3}; do echo sed -n '{\$i/p}' test5.txt; done
+  510  clear
+  511  for i in {1..3}; do echo sed -n {$ip} test5.txt; done
+  512  for i in {1..3}; do echo sed -n "{$ip}" test5.txt; done
+  513  for i in {1..3}; do echo "sed -n {$ip}" test5.txt; done
+  514  for i in {1..3}; do echo sed -n "{$ip}" test5.txt; done
+  515  for i in {1..3}; do echo "sed -n {$i}p" test5.txt; done
+  516  for i in {1..3}; do echo "sed -n {$ip}" test5.txt; done
+  517  for i in {1..3}; do echo "sed -n {i}" test5.txt; done
+  518  for i in {1..3}; do echo "sed -n {i}p" test5.txt; done
+  519  for i in {1..3}; do echo "sed -n {$i}p" test5.txt; done
+  520  for i in {1..3}; do echo "sed -n {$ip}" test5.txt; done
+  521  for i in {1..3}; do echo "sed {$ip}" test5.txt; done
+  522  for i in {1..3}; do echo sed -n "{$ip}" test5.txt; done
+  523  for i in {1..3}; do echo sed -n "$ip" test5.txt; done
+  524  for i in {1..3}; do echo sed -n "'$ip" test5.txt; done
+  525  for i in {1..3}; do echo sed -n "{$ip}" test5.txt; done
+  526  for i in {1..3}; do echo sed -n "{$i}p" test5.txt; done
+  527  for i in {1..3}; do echo sed -n "{$ip}" test5.txt; done
+  528  for i in {1..3}; do echo sed -n "{$i}" test5.txt; done
+  529  for i in {1..3}; do echo 'sed -n "{$i}" test5.txt'; done
+  530  for i in {1..3}; do echo "sed -n "{$i}" test5.txt"; done
+  531  for i in {1..3}; do "sed -n "{$i}" test5.txt"; done
+  532  for i in {1..3}; do sed -n "{$i}" test5.txt; done
+  533  for i in {1..3}; do echo sed -n "{$i}" test5.txt; done
+  534  for i in {1..3}; do echo sed -n "{$ip}" test5.txt; done
+  535  ls
+  536  clear
+  537  for i in {1..3}; do echo sed -n "{$ip}" test5.txt; done
+  538  for custID in $(cat test5.txt); do echo "custID"; done
+  539  for custID in $(cat test5.txt); do echo "$custID"; done
+  540  for custID in $(cat test5.txt); do echo "$custID"; done > "$custID".txt
+  541  ls
+  542  rm 5423543.txt 
+  543  ls
+  544  rm 435342534.txt 
+  545  rm 50122160.txt 
+  546  rm 50732546.txt 
+  547  rm 5423543.txt 
+  548  clear
+  549  ls
+  550  test5.txt
+  551  cat test5.txt
+  552  touch 50122160
+  553  ls
+  554  rm 50122160 
+  555  touch 50122160.txt
+  556  ls
+  557  for cust in $(*.txt); do echo "$cust"; done
+  558  for cust in $(*.txt); do echo "$cust" | cut -f3 ; done
+  559  for cust in $(*.txt); do echo "$cust" | cut -f3 amazon_reviews_us_Books_v1_02.tsv ; done
+  560  for cust in $(*.txt); do echo "$cust" cut -f3 amazon_reviews_us_Books_v1_02.tsv ; done
+  561  for cust in $(*.txt); do echo "$cust" && cut -f3 amazon_reviews_us_Books_v1_02.tsv ; done
+  562  clear
+  563  ls
+  564  for cust in $(*.txt); do echo cut -f1; done
+  565  for cust in $(*.txt); do echo cut -f1 "$*".txt; done
+  566  for review in (*.txt); do echo cut -f2 amazon_reviews_us_Books_v1_02.tsv ; done
+  567  for review in $(*.txt); do echo cut -f2 amazon_reviews_us_Books_v1_02.tsv ; done
+  568  for review in $(*.txt); do echo cat *.txt ; done
+  569  for review in $(*.txt); do echo cat "$*.txt" ; done
+  570  for review in $(*.txt); do echo cat "$*".txt ; done
+  571  for review in $(amazon_reviews_us_Books_v1_02.tsv); do echo $*.txt | cut -f3 amazon_reviews_us_Books_v1_02.tsv ; done
+  572  clear
+  573  for review in $(cat *.txt); do echo grep "$*" | cut -f3 amazon_reviews_us_Books_v1_02.tsv ; done
+  574  clear
+  575  for review in $(cat *.txt); do echo grep "$*" | cut -f3 amazon_reviews_us_Books_v1_02.tsv| head -3 ; done
+  576  for review in $(cat *.txt); do echo grep "$*" | cut -f10 amazon_reviews_us_Books_v1_02.tsv| head -3 ; done
+  577  for review in $(cat *.txt); do echo grep "$*" | cut -f11 amazon_reviews_us_Books_v1_02.tsv| head -3 ; done
+  578  for review in $(cat *.txt); do echo grep "$*" | cut -f12 amazon_reviews_us_Books_v1_02.tsv| head -3 ; done
+  579  for review in $(cat *.txt); do echo grep "$*" | cut -f3 amazon_reviews_us_Books_v1_02.tsv| head -3 ; done
+  580  for review in $(cat *.txt); do echo grep "$*" | cut -f3 amazon_reviews_us_Books_v1_02.tsv| head -5 ; done
+  581  for review in $(cat *.txt); do echo grep "$*" | cut -f3 amazon_reviews_us_Books_v1_02.tsv| head -1 ; done
+  582  for review in $(cat *.txt); do echo grep "$*" | cut -f 2,3,4 amazon_reviews_us_Books_v1_02.tsv| head -1 ; done
+  583  for review in $(cat *.txt); do echo grep "$*" | cut -f 2,3,4 amazon_reviews_us_Books_v1_02.tsv| head -2 ; done
+  584  for review in $(cat *.txt); do echo grep "$*" | cut -f 2,3,4 amazon_reviews_us_Books_v1_02.tsv| head -1 ; done
+  585  for review in $(cat *.txt); do echo grep "$*" | cut -f 2,3,4 amazon_reviews_us_Books_v1_02.tsv| head -3 ; done
+  586  for review in $(cat *.txt); do echo grep "$*" | awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv| head -3 ; done
+  587  for review in $(cat *.txt); do echo grep "$*" | awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv| head -1 ; done
+  588  clear
+  589  clear
+  590  for review in $(cat *.txt); do echo grep "*" amazon_reviews_us_Books_v1_02.tsv | cut -f2 | head -3; done;
+  591  for review in $(cat *.txt); do echo grep "$*" amazon_reviews_us_Books_v1_02.tsv | cut -f2 | head -3; done;
+  592  for review in $(cat *.txt); do echo grep "$*" amazon_reviews_us_Books_v1_02.tsv | cut -f2 | head -2; done;
+  593  for review in $(cat *.txt); do echo grep "$*" amazon_reviews_us_Books_v1_02.tsv | awk '{print $2}' | head -2; done;
+  594  clear
+  595  ls
+  596  cat test5.txt
+  597  rm 50122160.txt 
+  598  ls
+  599  for custID in $(cat test5.txt); do echo > "$custID".txt; done
+  600  ls
+  601  for reviewID in $(cat *.txt); do echo "$*"; done
+  602  ls
+  603  clear
+  604  for reviewID in $(cat *.txt); do echo "*"; done
+  605  for reviewID in $(cat *.txt); do echo "$*"; done
+  606  for reviewID in $(cat *.txt); do echo "$*.txt"; done
+  607  for reviewID in $(cat *.txt); do echo "$*".txt; done
+  608  for reviewID in $(cat *.txt); do echo "$*"; done
+  609  cat *.txt
+  610  for reviewID in (cat *.txt); do echo "$*"; done
+  611  for reviewID in $(cat *.txt); do echo cat "$*.txt"; done
+  612  for reviewID in $(cat *.txt); do echo cat "$*"; done
+  613  for reviewID in $(cat *.txt); do echo "cat $*"; done
+  614  for reviewID in $(cat *.txt); do echo 'cat "$*"; done
+  615  clear
+  616  for reviewID in $(cat *.txt); do echo "$*"; done
+  617  for i in {0...3} ; do echo $(cat *.txt); done
+  618  for reviewID in $(cat *.txt); do echo 'cut -f2 amazon_reviews_us_Books_v1_02.tsv' ; done
+  619  for reviewID in $(cat *.txt); do echo "cut -f2 amazon_reviews_us_Books_v1_02.tsv" ; done
+  620  for reviewID in $(cat *.txt); do echo "cut -f2 amazon_reviews_us_Books_v1_02.tsv" | head -3 ; done
+  621  for reviewID in $(cat *.txt); do echo grep "$*" amazon_reviews_us_Books_v1_02.tsv | head -3 ; done
+  622  for reviewID in $(cat *.txt); do grep "$*" amazon_reviews_us_Books_v1_02.tsv | head -3 ; done
+  623  delete
+  624  clear
+  625  for reviewID in $(cat *.txt); do grep "$*" amazon_reviews_us_Books_v1_02.tsv | head -1 ; done
+  626  for reviewID in $(cat *.txt); do cut -f2 amazon_reviews_us_Books_v1_02.tsv | head -2; done
+  627  cat test5.txt
+  628  for reviewID in $(cat *.txt); do cut -f2 amazon_reviews_us_Books_v1_02.tsv | grep "$*" | head -2; done
+  629  for reviewID in $(cat *.txt); grep "$*" amazon_reviews_us_Books_v1_02.tsv| cut -f2|  head -2; done
+  630  for reviewID in $(cat *.txt); do grep "$*" amazon_reviews_us_Books_v1_02.tsv| cut -f2|  head -2; done
+  631  for reviewID in $(cat *.txt); do grep "*" amazon_reviews_us_Books_v1_02.tsv| cut -f2|  head -2; done
+  632  for reviewID in $(cat *.txt); do grep "$*" amazon_reviews_us_Books_v1_02.tsv| cut -f2|  head -2; done
+  633  for reviewID in $(cat *.txt); do grep "$*" amazon_reviews_us_Books_v1_02.tsv| cut -f3|  head -2; done
+  634  for reviewID in $(cat *.txt); do grep "$*" amazon_reviews_us_Books_v1_02.tsv| cut -f3| tail -1; done
+  635  for reviewID in $(cat *.txt); do cat "$*".txt; done
+  636  ls
+  637  for reviewID in $(*.txt); do cat "$*".txt; done
+  638  for reviewID in (*.txt); do cat "$*".txt; done
+  639  clear
+  640  while read REVIEWS; do echo "$REVIEWS"; done 
+  641  clear
+  642  ls
+  643  mkdir WS5Testing
+  644  rmdir WS5Testing/
+  645  ls
+  646  for reviews in $(cat *.txt); do echo *.txt; done
+  647  clear
+  648  for reviews in $(cat *.txt); do echo *.txt; done
+  649  for reviews in $(cat *.txt); do echo "*".txt; done
+  650  for reviews in $(cat *.txt); do echo "$*.txt"; done
+  651  for reviews in $(cat *.txt); do echo $*.txt; done
+  652  for reviews in $(cat *.txt); do echo *.txt; done
+  653  ls
+  654  clear
+  655  for reviews in $(cat *.txt); do echo *.txt; done
+  656  for reviews in $(cat *.txt) in {0..3; do echo *.txt; done
+  657  for reviews in $(cat *.txt) in {0..3}; do echo *.txt; done
+  658  clear
+  659  for reviews in $(cat *.txt) in {0..3}; do echo $i.txt; done
+  660  for reviews in $(cat *.txt) in {0..3}; do echo "$i.txt"; done
+  661  for reviews in $(cat *.txt) in {0..3}; do echo "$i"; done
+  662  clear
+  663  for reviews in $(cat *.txt) in {0..3}; do echo *; done
+  664  clear
+  665  for reviews in $(cat *.txt) in {0..3}; do *.txt; done
+  666  for reviews in $(cat *.txt) in {0..3}; do cat *.txt; done
+  667  clear
+  668  for reviews in $(cat *.txt) in {0..3}; do cat*.txt; done
+  669  for reviews in $(cat *.txt); do cat*.txt break; done
+  670  clear
+  671  for custID in $(cat test5.txt); do echo $custID; done
+  672  for custID in $(cat *.txt); do echo $custID; done
+  673  for custID in $(cat *.txt); do  $custID; done
+  674  for custID in $(cat *.txt); do awk '{print $custID}'; done
+  675  clear
+  676  for custID in $(cat *.txt); do echo $custID; done
+  677  for REVIEWS in $(cat *.txt); do echo $REVIEWS; done
+  678  for REVIEWS in $(cat *.txt); do echo grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| head -2; done
+  679  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| head -2; done
+  680  clear
+  681  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2|  head -2; done
+  682  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f 2,3|  head -2; done
+  683  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 ; done
+  684  clear
+  685  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -3; done
+  686  cat test5.txt
+  687  for REVIEWS in $(cat *.txt); do for i in {0...3} ; do sed -n '{$i}p'; done; 
+  688  clear
+  689  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -5; done
+  690  for REVIEWS in $(cat *.txt); do if ($REVIEWS==$REVIEWS) grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -5; done
+  691  for REVIEWS in $(cat *.txt); do if ($REVIEWS==$REVIEWS) then grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -5; done
+  692  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -5; done
+  693  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| awk '{print $2}' | head -5; done
+  694  for REVIEWS in $(*.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| awk '{print $2}' | head -5; done
+  695  for REVIEWS in $(*.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -5; done
+  696  for REVIEWS in $(*.txt); do echo grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -5; done
+  697  for REVIEWS in ($*.txt); do echo grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -5; done
+  698  for REVIEWS in $(*.txt); do echo grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -5; done
+  699  clear
+  700  for REVIEWS in $(*.txt); do echo grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| head -5; done
+  701  for REVIEWS in $(*.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| head -5; done
+  702  for REVIEWS in $(*.txt); do "grep $REVIEWS" amazon_reviews_us_Books_v1_02.tsv| head -5; done
+  703  for REVIEWS in $(*.txt); do grep '$REVIEWS' amazon_reviews_us_Books_v1_02.tsv| head -5; done
+  704  for REVIEWS in $(*.txt); do echo $REVIEWS; done
+  705  for REVIEWS in $(cat *.txt); do echo $REVIEWS; done
+  706  for REVIEWS in $(*.txt); do echo "$REVIEWS"; done
+  707  for REVIEWS in $(vi *.txt); do echo "$REVIEWS"; done
+  708  clear
+  709  ls
+  710  for i in ${cat *i.txt}; do echo $i; done
+  711  for i in ${cat *.txt}; do echo $i; done
+  712  for i in ${cat i.txt}; do echo $i; done
+  713  for i in $(cat i.txt); do echo $i; done
+  714  for i in $(cat *i.txt); do echo $i; done
+  715  for i in $(cat *.txt); do echo $i; done
+  716  for i in $(cat *.txt); do  $i; done
+  717  for i in $(cat *.txt); do grep "$i" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -3; done
+  718  for i in $(*.txt); do grep "$i" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -3; done
+  719  for REVIEWS in $(*.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -3; done
+  720  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f2 | head -3; done
+  721  cd
+  722  mkdir ws5testFile
+  723  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | head -3
+  724  cd
+  725  mkdir ws5test
+  726  cp amazon_reviews_us_Books_v1_02.tsv /home/eric/ws5test
+  727  cd ws5test
+  728  clear
+  729  ls
+  730  cut -f2 file | sort | uniq -c | sort -rn| awk '{print $2}' | head -10 > file.txt
+  731  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn| awk '{print $2}' | head -10 > TOP1K.txt
+  732  ls
+  733  rm file.txt
+  734  cat TOP1K.txt
+  735  for custID in $(cat TOP1K.txt); do echo > "$cusdID".txt; done
+  736  ls
+  737  clear
+  738  ls
+  739  for custID in $(cat TOP1K.txt); do echo > "$custID".txt; done
+  740  ls
+  741  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv > "$REVIEWS".txt; done
+  742  cat 20595117.txt 
+  743  ls
+  744  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f3,4 | head -3; done
+  745  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f3,4 | head -1; done
+  746  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv| cut -f3 |head -1; done
+  747  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv |head -1; done
+  748  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv > "$REVIEWS".txt; done
+  749  ls
+  750  clear
+  751  ls
+  752  cat 435342534.txt | head -1
+  753  cat 435342534.txt | head -3
+  754  clear
+  755  ls
+  756  rm 435342534.txt 
+  757  rm 50122160.txt 
+  758  rm 50732546.txt 
+  759  rm 5423543.txt 
+  760  cd ws5
+  761  script ws5.txt
+  762  cd
+  763  rm ws5testFile/
+  764  rm -rf ws5testFile/
+  765  ls
+  766  rm test5.txt
+  767  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | awk '{print $2}' > test5.txt
+  768  ls
+  769  cat test5.txt
+  770  clear
+  771  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | head -3 > test5.txt
+  772  cat test5.txt
+  773  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn | awk '{print $2}'| head -3 > test5.txt
+  774  cat test5.txt
+  775  mkdir ws5test
+  776  mv test5.txt /home/eric/ws5test
+  777  ls
+  778  cd ws5t
+  779  cd ws5test/
+  780  ls
+  781  cp test5.txt /home/eric
+  782  ls
+  783  cd
+  784  ls
+  785  clear
+  786  ls
+  787  for custID in $(cat test5.txt); do echo > "$custID".txt; done
+  788  ls
+  789  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" ; amazon_reviews_us_Books_v1_02.tsv > "$REVIEWS".txt; done
+  790  cat 50122160.txt 
+  791  cat 50732546.txt 
+  792  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv > "$REVIEWS".txt; done
+  793  cat 50732546.txt 
+  794  clear
+  795  ls
+  796  rm 50122160.txt 
+  797  rm 50732546.txt 
+  798  rm 52615377.txt 
+  799  rm test5.txt
+  800  rm -rf ws5test
+  801  ls
+  802  mkdir ws5test
+  803  cd ws5
+  804  script ws5.txt
+  805  cd
+  806  cp amazon_reviews_us_Books_v1_02.tsv /home/eric/ws5test
+  807  cd ws5test
+  808  clear
+  809  ls
+  810  cut -f2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -rn| awk '{print $2}' | head -1000 > TOP1K.txt
+  811  cat Top1K.txt | head -10
+  812  ls
+  813  cat TOP1K.txt | head -10
+  814  clear
+  815  for custID in $(cat TOP1k.txt); do echo > "$custID".txt; done
+  816  for custID in $(cat TOP1K.txt); do echo > "$custID".txt; done
+  817  ls
+  818  for REVIEWS in $(cat *.txt); do grep "$REVIEWS" amazon_reviews_us_Books_v1_02.tsv > "$REVIEWS".txt; done
+  819  cd
+  820  ls
+  821  rm -rf ws5test
+  822  ls
+  823  cd ws5
+  824  script ws5.txt
+  825  cd
+  826  cd ws5
+  827  vi ws5.txt
+  828  clear
+  829  vi ws5.txt
+  830  touch ws5_answer.txt
+  831  ls
+  832  history > cmds.log
+  833  ls
+  834  vi ws5_answer.txt 
+  835  clear
+  836  ls
+  837  git init
+  838  git commit -m "first commit"
+  839  git branch -M main
+  840  git remote rm origin
+  841  git remote add origin https://github.com/Yiralle/ws5.git
+  842  git push -u origin main
+  843  git add .
+  844  git push -u origin main
+  845  git remote rm origin
+  846  git commit -m "first commit"
+  847  git branch -M main
+  848  git remote add origin https://github.com/Yiralle/ws5.git
+  849  git push -u origin main
+  850  cd /mnt/scratch/eric
+  851  ls
+  852  pwd
+  853  crontab -l
+  854  echo 'date'
+  855  cd
+  856  ls
+  857  cd A2
+  858  ls
+  859  cat a2.txt
+  860  cd
+  861  cd ws4
+  862  ls
+  863  cd
+  864  clear
+  865  ls
+  866  cp /home/eric/ws4 /mnt/scratch/eric
+  867  clear
+  868  mkdir ws6
+  869  ls
+  870  cd ws6
+  871  crontab ws6
+  872  crontab /home/eric/ws6
+  873  cd
+  874  cd ws4
+  875  ls
+  876  cd CUSTOMERS
+  877  ls
+  878  cd
+  879  cd ws4
+  880  ls
+  881  cd CUSTOMERS
+  882  ls
+  883  cd
+  884  cd ws4
+  885  cd PRODUCTS
+  886  ls
+  887  cd
+  888  cd ws4
+  889  cat README.md 
+  890  echo Today is 'date'
+  891  echo Today is `date`
+  892  ls
+  893  crontab -e
+  894  ls
+  895  crontab -l
+  896  crontab -r
+  897  cd ws6
+  898  ls
+  899  crontab ws6.txt
+  900  DATETIME = $ `date`
+  901  DATETIME = $`date`
+  902  touch DATETIME
+  903  ls
+  904  DATETIME = $(date)
+  905  DATETIME = `date`
+  906  ls
+  907  rm DATETIME
+  908  clear
+  909  DATETIME=`date`
+  910  echo $DATETIME
+  911  cd
+  912  ls
+  913  cd ws4
+  914  ls
+  915  cp CUSTOMERS/ /home/eric/ws6
+  916  cp -r CUSTOMERS/ /home/eric/ws6
+  917  cp -r PRODUCTS/ /home/eric/ws6
+  918  cd
+  919  clear
+  920  cd ws6
+  921  ls
+  922  cd CUSTOMERS/
+  923  ls
+  924  clear
+  925  cd
+  926  cd ws6
+  927  ls
+  928  cd
+  929  ls
+  930  cd ws6
+  931  clear
+  932  DATETIME=`date`
+  933  echo $DATETIME
+  934  ls
+  935  cd PRODUCTS
+  936  ls
+  937  cd
+  938  cd ws6
+  939  cp PRODUCTS/0310205719.txt PRODUCTS/0310205719.DATETIME.txt
+  940  ls
+  941  cd PRODUCTS
+  942  ls
+  943  rm 0310205719.DATETIME.txt 
+  944  cd
+  945  cd ws6
+  946  cp PRODUCTS/0310205719.txt PRODUCTS/0310205719.$DATETIME.txt
+  947  cp PRODUCTS/ PRODUCTS/ "$DATETIME"
+  948  cp PRODUCTS/ PRODUCTS/ `DATETIME`
+  949  cp PRODUCTS/ PRODUCTS/ "$DATETIME"
+  950  $DATETIME
+  951  DATETIME
+  952  clear
+  953  echo DATETIME
+  954  echo $DATETIME
+  955  DATETIME = $(date)
+  956  DATETIME=$(date)
+  957  echo $DATETIME
+  958  cp PRODUCTS/* PRODUCTS/*.$DATETIME.txt
+  959  cp PRODUCTS/* PRODUCTS/*.$DATETIME
+  960  cp PRODUCTS/0310205719.txt PRODUCTS/0310205719.$DATETIME.txt
+  961  cp PRODUCTS/0310205719.txt PRODUCTS/0310205719_$DATETIME.txt
+  962  ls -l
+  963  cd PRODUCTS/
+  964  ls -l
+  965  for file in `ls`; do cp $file $file.`DATETIME +%Y%m%d`; done
+  966  for file in `ls`; do cp $file $file.`date +%Y%m%d`; done
+  967  ls -l
+  968  date
+  969  clear
+  970  ls
+  971  cd PRODUCTS
+  972  DATETIME=$(date +%Y%m%d)
+  973  echo "DATETIME"
+  974  echo $DATETIME
+  975  for file in `ls`; do basename=${file%.*}; extension=${file##*.}; mv "$file" "basename"_"$DATETIME.$extension"; done
+  976  ls
+  977  cd PRODUCTS
+  978  DATETIME=$(date +%Y%m%d)
+  979  echo $DATETIME
+  980  for file in `ls`; do basename=${file%.*}; extension=${file##*.}; mv "$file" "$basename"_$DATETIME.$extension"
+  981  done
+  982  cd PRODUCTS
+  983  DATETIME=$(date +%Y%m%d)
+  984  echo $DATETIME
+  985  for file in `ls` ; do     basename=${file%.*}    # Remove extension;     extension=${file##*.}  # Remove basename;     mv "$file" "$basename"_"$DATETIME.$extension"; done
+  986  ls
+  987  cd
+  988  cd ws6
+  989  ls
+  990  LATEST=$(date +%Y%m%d)
+  991  echo $LATEST
+  992  grep '0310205719' amazon_reviews_us_Books_v1_02.tsv | cut -f8 > /home/eric/ws6/PRODUCTS/0310205719_"$LATEST".txt
+  993  cd PRODUCTS
+  994  ls
+  995  cat 0310205719_20221020.txt | head -3
+  996  ln -s /home/eric/ws6/PRODUCTS/0310205719_"$LATEST".txt /home/eric/ws6/PRODUCTS/0310205719_"$DATETIME".txt
+  997  done
+  998  cd
+  999  cd ws6
+ 1000  ls
+ 1001  rm -rf PRODUCTS
+ 1002  cd
+ 1003  cd ws4
+ 1004  cp PRODUCTS/ /home/eric/ws6
+ 1005  cp -r PRODUCTS/ /home/eric/ws6
+ 1006  ls
+ 1007  cd
+ 1008  cd ws6
+ 1009  ls
+ 1010  script ws6.txt
+ 1011  cd
+ 1012  cd ws6
+ 1013  ls
+ 1014  rm amazon_reviews_us_Books_v1_02.tsv 
+ 1015  ls
+ 1016  history > cmds.log
